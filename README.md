@@ -25,6 +25,10 @@ myTab is your web browser's separate tab solution with features like background 
 
 **For Firefox Browser**: background filter feature is behind `thelayout.css.backdrop-filter.enabled` preferences (needs to be set to true) and the `gfx.webrender.all` preferences (needs to be set to true). To change preferences in *Firefox*, visit **about:config**.
 
+## Modular Approach (v2)
+
+If you want to use this project with modules for better file management and structure, then please check the **[v2 branch](https://github.com/helloukey/myTab/tree/v2)**.
+
 
 ## Authors
 
