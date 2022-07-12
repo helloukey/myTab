@@ -1,0 +1,20 @@
+{
+  "name": "myTab",
+  "description": "myTab is a simple chrome extension that overrides a new chrome tab with wallpaper, weather information, date, time, and quotes.",
+  "version": "1.0",
+  "manifest_version": 3,
+  "action": {},
+  "background": {
+    "service_worker": "background-extension.js"
+  },
+
+  "icons": {
+    "16": "/favicon/favicon-16x16.png",
+    "32": "/favicon/favicon-32x32.png",
+    "192": "/favicon/android-chrome-192x192.png"
+  },
+
+  "permissions": ["tabs", "activeTab", "geolocation"],
+
+  "chrome_url_overrides": { "newtab": "index.html" }
+}

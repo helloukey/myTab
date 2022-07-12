@@ -141,7 +141,7 @@ const getWeather = async (latitude, longitude) => {
 };
 // Update Weather
 const updateWeather = (response) => {
-  weatherIcon.src = response.current.condition.icon;
+  weatherIcon.src = `https:${response.current.condition.icon}`;
   locationText.textContent = response.location.name;
   const tempText = `${response.current.temp_c}° C`;
   temperatureText.textContent = tempText;
