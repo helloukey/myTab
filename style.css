@@ -99,7 +99,9 @@ body {
 .weather-details-container {
     position: absolute;
     top: 15px;
-    right: 15px
+    right: 15px;
+    max-width: 200px;
+    text-align: right;
 }
 
 .temperature,
