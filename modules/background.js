@@ -3,23 +3,36 @@ const bodyContainer = document.querySelector("body");
 const bgReset = document.querySelector(".reset");
 const bgRefresh = document.querySelector(".bg-refresh");
 
+// Default Background Image
+bodyContainer.style.backgroundImage = `url("${"./background/loading-background.svg"}")`;
+
 // Get Background
 const getBackground = async () => {
   const response = await fetch("https://source.unsplash.com/random");
   return response;
 };
 getBackground().then((response) => {
-  const img = response.url;
-  document.body.style.backgroundImage = `url("${img}")`;
-  applyEffects();
+  const img = document.createElement("img");
+  img.src = response.url;
+  img.addEventListener("load", () => {
+    bodyContainer.style.backgroundImage = `url("${img.src}")`;
+    applyEffects();
+  });
 });
 
 // Background Refresh
 bgRefresh.addEventListener("click", () => {
+  // Set Default Background Until Image Loaded
+  bodyContainer.style.backgroundImage = `url("${"./background/loading-background.svg"}")`;
+  bodyContainer.style.backdropFilter = "";
+
   getBackground().then((response) => {
-    const img = response.url;
-    document.body.style.backgroundImage = `url("${img}")`;
-    applyEffects();
+    const img = document.createElement("img");
+    img.src = response.url;
+    img.addEventListener("load", () => {
+      bodyContainer.style.backgroundImage = `url("${img.src}")`;
+      applyEffects();
+    });
   });
 });
 
