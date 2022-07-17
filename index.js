@@ -1,6 +1,8 @@
 // Background Document Queries
+const root = document.querySelector("html");
 const bodyContainer = document.querySelector("body");
 const bgReset = document.querySelector(".reset");
+const fullScreen = document.querySelector(".fullscreen-toggle");
 const bgRefresh = document.querySelector(".bg-refresh");
 const settings = document.querySelector(".settings");
 const settingsIcon = document.querySelector(".settings-icon");
@@ -22,6 +24,19 @@ getBackground().then((response) => {
     bodyContainer.style.backgroundImage = `url("${img.src}")`;
     applyEffects();
   });
+});
+
+// Fullscreen Toggle
+fullScreen.addEventListener("click", () => {
+  if (root.fullscreenElement) root.requestFullscreen();
+  else if (root.mozRequestFullScreen) root.mozRequestFullScreen();
+  else if (root.webkitRequestFullscreen) root.webkitRequestFullscreen();
+  else if (root.msRequestFullscreen) root.msRequestFullscreen();
+
+  if (document.exitFullscreen) document.exitFullscreen();
+  else if (document.mozCancelFullScreen) document.mozCancelFullScreen();
+  else if (document.webkitExitFullscreen) document.webkitExitFullscreen();
+  else if (document.msExitFullscreen) document.msExitFullscreen();
 });
 
 // Background Refresh
