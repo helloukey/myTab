@@ -210,11 +210,16 @@ input {
     outline: 1px solid transparent;
 }
 
-.bg-refresh {
+.big-buttons {
+    margin-top: 20px;
+}
+
+.bg-refresh, .fullscreen-toggle {
     display: inline-block;
     padding: 10px 20px;
     border: 0.1em solid #FFFFFF;
-    margin: 30px auto;
+    margin: 10px auto;
+    margin-top: 10px;
     border-radius: 2px;
     box-sizing: border-box;
     text-decoration: none;
@@ -227,7 +232,7 @@ input {
     cursor: pointer;
 }
 
-.bg-refresh:hover {
+.bg-refresh:hover, .fullscreen-toggle:hover {
     color: #000000;
     background-color: rgba(255, 255, 255)
 }
