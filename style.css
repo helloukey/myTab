@@ -170,6 +170,7 @@ body {
     bottom: 0;
     bottom: 20px;
     background: rgba(0, 0, 0, 0.9);
+    overflow:auto;
     z-index: 1;
 }
 
@@ -249,6 +250,45 @@ input {
 
 .close:hover {
     background-color: rgba(255, 21, 0, 0.7);
+}
+
+/* Background Dropdown Menu Style */
+.dropdown {
+    position: relative;
+    display: inline-block
+}
+
+.dropdown-options {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    width: 100%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.bg-option {
+    display: block;
+    padding: 10px 20px;
+    border: 0.1em solid #FFFFFF;
+    border-radius: 2px;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 300;
+    color: #FFFFFF;
+    width: 100%;
+    text-align: center;
+    transition: all 0.2s;
+    background-color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+.dropdown-options a {
+    display: block;
+}
+
+.dropdown:hover .dropdown-options {
+    display: block;
 }
 
 /* Settings Icon Styles */
