@@ -4,6 +4,8 @@ const bodyContainer = document.querySelector("body");
 const bgReset = document.querySelector(".reset");
 const fullScreen = document.querySelector(".fullscreen-toggle");
 const bgRefresh = document.querySelector(".bg-refresh");
+const dropdownOptions = document.querySelector(".dropdown-options");
+const backgroundCategories = ["nature", "city", "fruit", "animal"]
 
 // Default Background Image
 bodyContainer.style.backgroundImage = `url("${"./background/loading-background.svg"}")`;
@@ -21,6 +23,40 @@ getBackground().then((response) => {
     applyEffects();
   });
 });
+
+const getBackgroundFromCategory = async (category) => {
+  const url = `https://source.unsplash.com/random/?${category}`
+  const response = await fetch(url);
+  return response;
+}
+
+// Create Dropdown Menu Options for Background Categories
+const appendBackgroundOptions = () => {
+  backgroundCategories.forEach((category) => {
+    const newOption = document.createElement("button");
+    const optionName = category.charAt(0).toUpperCase() + category.slice(1)
+    const newSpan = document.createElement("span");
+    newOption.className = "bg-option"
+    newOption.textContent = optionName;
+    // Background Refresh for Specific Category
+    newOption.addEventListener("click", () => {
+      // Set Default Background Until Image Loaded
+      bodyContainer.style.backgroundImage = `url("${"./background/loading-background.svg"}")`;
+      bodyContainer.style.backdropFilter = "";
+
+      getBackgroundFromCategory(category).then((response) => {
+        const img = document.createElement("img");
+        img.src = response.url;
+        img.addEventListener("load", () => {
+          bodyContainer.style.backgroundImage = `url("${img.src}")`;
+          applyEffects();
+        });
+      });
+    })
+    dropdownOptions.append(newOption);
+  })
+}
+appendBackgroundOptions();
 
 // Fullscreen Toggle
 fullScreen.addEventListener("click", () => {
