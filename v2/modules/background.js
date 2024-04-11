@@ -35,7 +35,7 @@ const appendBackgroundOptions = () => {
   backgroundCategories.forEach((category) => {
     const newOption = document.createElement("button");
     const optionName = category.charAt(0).toUpperCase() + category.slice(1);
-    const newSpan = document.createElement("span");
+    // const newSpan = document.createElement("span");
     newOption.className = "bg-option";
     newOption.textContent = optionName;
     // Background Refresh for Specific Category

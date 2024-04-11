@@ -40,7 +40,7 @@ const appendBackgroundOptions = () => {
   backgroundCategories.forEach((category) => {
     const newOption = document.createElement("button");
     const optionName = category.charAt(0).toUpperCase() + category.slice(1);
-    const newSpan = document.createElement("span");
+    // const newSpan = document.createElement("span");
     newOption.className = "bg-option";
     newOption.textContent = optionName;
     // Background Refresh for Specific Category
@@ -231,16 +231,18 @@ const timeContainer = document.querySelector(".time");
 const dateContainer = document.querySelector(".date");
 
 setInterval(() => {
+  // eslint-disable-next-line no-undef
   timeContainer.textContent = dayjs().format("h:mm A");
 }, 1000);
 
 setInterval(() => {
+  // eslint-disable-next-line no-undef
   dateContainer.textContent = dayjs().format("MMMM D, YYYY");
 }, 1000);
 
 // Quote Document Queries
 const loader = document.querySelector(".loader");
-const quoteContainer = document.querySelector(".quote-container");
+// const quoteContainer = document.querySelector(".quote-container");
 const quote = document.querySelector(".quote");
 const author = document.querySelector(".author");
 const copy = document.querySelector(".copy");

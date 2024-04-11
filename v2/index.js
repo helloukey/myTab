@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 // Imports
 import * as background from "./modules/background.js";
 import * as settings from "./modules/settings.js";

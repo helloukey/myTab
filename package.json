@@ -4,7 +4,14 @@
   "description": "myTab is a simple chrome extension that overrides a new chrome tab with beautiful Wallpaper, Weather Information, Date, Time, and a Quote.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky",
+    "format": "prettier --write ."
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown",
+    "*.js": "eslint --cache --fix --max-warnings=0",
+    "*.--write": "prettier --write"
   },
   "repository": {
     "type": "git",
@@ -25,6 +32,8 @@
     "eslint": "^9.0.0",
     "eslint-config-prettier": "^9.1.0",
     "globals": "^15.0.0",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
     "prettier": "3.2.5"
   }
 }
