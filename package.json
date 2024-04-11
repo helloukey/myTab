@@ -1,0 +1,30 @@
+{
+  "name": "mytab",
+  "version": "1.0.0",
+  "description": "myTab is a simple chrome extension that overrides a new chrome tab with beautiful Wallpaper, Weather Information, Date, Time, and a Quote.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/helloukey/myTab.git"
+  },
+  "keywords": [
+    "myTab"
+  ],
+  "author": "Kunal Ukey",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/helloukey/myTab/issues"
+  },
+  "homepage": "https://github.com/helloukey/myTab#readme",
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.0.2",
+    "@eslint/js": "^9.0.0",
+    "eslint": "^9.0.0",
+    "eslint-config-prettier": "^9.1.0",
+    "globals": "^15.0.0",
+    "prettier": "3.2.5"
+  }
+}

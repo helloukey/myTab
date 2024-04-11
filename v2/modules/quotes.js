@@ -64,14 +64,14 @@ refresh.addEventListener("click", () => {
 });
 
 export {
-    loader,
-    quoteContainer,
-    quote,
-    author,
-    copy,
-    refresh,
-    loaderShow,
-    loaderHide,
-    getQuote,
-    updateQuote,
-}
+  loader,
+  quoteContainer,
+  quote,
+  author,
+  copy,
+  refresh,
+  loaderShow,
+  loaderHide,
+  getQuote,
+  updateQuote,
+};

@@ -35,4 +35,11 @@ const sucessCallback = (position) => {
 // Getting & Passing Current Position
 navigator.geolocation.getCurrentPosition(sucessCallback);
 
-export { weatherText, temperatureText, locationText, getWeather, updateWeather, sucessCallback }
+export {
+  weatherText,
+  temperatureText,
+  locationText,
+  getWeather,
+  updateWeather,
+  sucessCallback,
+};

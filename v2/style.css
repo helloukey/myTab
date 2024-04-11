@@ -1,384 +1,382 @@
 /* Google Fonts Import */
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=JetBrains+Mono:wght@600&family=Text+Me+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=JetBrains+Mono:wght@600&family=Text+Me+One&display=swap");
 
 /* Universal Styling */
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    font-family: 'JetBrains Mono', monospace;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "JetBrains Mono", monospace;
 }
 
 body {
-    width: 100vw;
-    min-height: 100vh;
-    color: whitesmoke;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
+  width: 100vw;
+  min-height: 100vh;
+  color: whitesmoke;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
 .container {
-    width: 100%;
-    max-width: 600px;
-    height: auto;
-    text-align: center;
-    background: rgba(0, 0, 0, 0.3);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    border-radius: 5px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    position: absolute;
-    display: grid;
-    grid-auto-columns: 1fr;
-    grid-template-columns: 1fr 1fr;
-    gap: 0px 0px;
-    justify-content: center;
-    align-content: center;
-    justify-items: center;
-    align-items: center;
-    grid-template-areas: "weather weather""date date""quote quote"". buttons";
-    cursor: move;
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  position: absolute;
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-columns: 1fr 1fr;
+  gap: 0px 0px;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  align-items: center;
+  grid-template-areas: "weather weather" "date date" "quote quote" ". buttons";
+  cursor: move;
 }
 
 /* Hidden Class For Loader */
 .hidden {
-    display: none;
+  display: none;
 }
 
 /* Loader */
 .loader {
-    border: 8px solid #a0a0a0;
-    border-top: 8px solid #fbfbfb;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    margin: auto;
-    text-align: center;
-    animation: spin 2s linear infinite;
+  border: 8px solid #a0a0a0;
+  border-top: 8px solid #fbfbfb;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin: auto;
+  text-align: center;
+  animation: spin 2s linear infinite;
 }
 
 /* Loader Animation */
 @keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
+  0% {
+    transform: rotate(0deg);
+  }
 
-    100% {
-        transform: rotate(360deg);
-    }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /* Weather Container Styles */
 .weather-container {
-    grid-area: weather;
+  grid-area: weather;
 }
 
-.icon-container>img {
-    width: 60px;
-    height: 60px;
-    background: rgba(0, 0, 0, 0.8);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    position: relative;
-    bottom: 30px
+.icon-container > img {
+  width: 60px;
+  height: 60px;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  position: relative;
+  bottom: 30px;
 }
 
 .location-container {
-    position: absolute;
-    top: 15px;
-    left: 15px
+  position: absolute;
+  top: 15px;
+  left: 15px;
 }
 
 .weather-details-container {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    max-width: 200px;
-    text-align: right;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  max-width: 200px;
+  text-align: right;
 }
 
 .temperature,
 .weather-text {
-    display: inline-block;
-    margin: auto 5px;
+  display: inline-block;
+  margin: auto 5px;
 }
-
 
 /* Date Container Styles */
 .date-container {
-    grid-area: date;
-    align-self: flex-start;
-    padding: 15px;
+  grid-area: date;
+  align-self: flex-start;
+  padding: 15px;
 }
 
-.date-container>.time {
-    font-size: 42px;
+.date-container > .time {
+  font-size: 42px;
 }
 
 /* Quote Container Styles */
 .quote-container {
-    grid-area: quote;
-    padding: 15px;
+  grid-area: quote;
+  padding: 15px;
 }
 
-.quote-container>.quote {
-    font-family: 'Text Me One', sans-serif;
-    font-size: 22px;
-    padding: 20px;
+.quote-container > .quote {
+  font-family: "Text Me One", sans-serif;
+  font-size: 22px;
+  padding: 20px;
 }
 
 .author {
-    font-family: 'Caveat', cursive;
-    align-self: flex-end;
-    padding-top: 20px;
+  font-family: "Caveat", cursive;
+  align-self: flex-end;
+  padding-top: 20px;
 }
 
 .buttons {
-    grid-area: buttons;
-    justify-self: flex-end;
-    padding: 10px;
+  grid-area: buttons;
+  justify-self: flex-end;
+  padding: 10px;
 }
 
-.buttons>img {
-    width: 22px;
-    height: 22px;
-    margin: auto 4px;
-    cursor: pointer;
+.buttons > img {
+  width: 22px;
+  height: 22px;
+  margin: auto 4px;
+  cursor: pointer;
 }
 
-.buttons>.refresh {
-    margin-right: 8px;
+.buttons > .refresh {
+  margin-right: 8px;
 }
-
 
 /* Settings Menu */
 .settings {
-    width: 250px;
-    height: 100%;
-    color: white;
-    text-align: left;
-    padding: 50px 20px;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    bottom: 20px;
-    background: rgba(0, 0, 0, 0.9);
-    overflow: auto;
-    z-index: 1;
+  width: 250px;
+  height: 100%;
+  color: white;
+  text-align: left;
+  padding: 50px 20px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  bottom: 20px;
+  background: rgba(0, 0, 0, 0.9);
+  overflow: auto;
+  z-index: 1;
 }
 
 input {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .setting7 {
-    margin: 10px auto;
+  margin: 10px auto;
 }
 
 .slider {
-    margin: 10px auto;
+  margin: 10px auto;
 }
 
 /* Buttons */
 .reset {
-    display: block;
-    outline: 0;
-    cursor: pointer;
-    text-align: center;
-    border: 1px solid #babfc3;
-    height: 35px;
-    width: 100px;
-    max-width: 100%;
-    padding: 2px 4px;
-    color: #ffffff;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 2px;
-    font-weight: 500;
-    font-size: 10px;
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 0px 0px;
+  display: block;
+  outline: 0;
+  cursor: pointer;
+  text-align: center;
+  border: 1px solid #babfc3;
+  height: 35px;
+  width: 100px;
+  max-width: 100%;
+  padding: 2px 4px;
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 2px;
+  font-weight: 500;
+  font-size: 10px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 0px 0px;
 }
 
 .reset:hover {
-    background-color: rgba(255, 255, 255);
-    color: #000000;
-    outline: 1px solid transparent;
+  background-color: rgba(255, 255, 255);
+  color: #000000;
+  outline: 1px solid transparent;
 }
 
 .big-buttons {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
-.bg-refresh, .fullscreen-toggle {
-    display: inline-block;
-    padding: 10px 20px;
-    border: 0.1em solid #FFFFFF;
-    margin: 10px auto;
-    margin-top: 10px;
-    border-radius: 2px;
-    box-sizing: border-box;
-    text-decoration: none;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300;
-    color: #FFFFFF;
-    text-align: center;
-    transition: all 0.2s;
-    background-color: rgba(0, 0, 0, 0.5);
-    cursor: pointer;
+.bg-refresh,
+.fullscreen-toggle {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 0.1em solid #ffffff;
+  margin: 10px auto;
+  margin-top: 10px;
+  border-radius: 2px;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: #ffffff;
+  text-align: center;
+  transition: all 0.2s;
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
 }
 
-.bg-refresh:hover, .fullscreen-toggle:hover {
-    color: #000000;
-    background-color: rgba(255, 255, 255)
+.bg-refresh:hover,
+.fullscreen-toggle:hover {
+  color: #000000;
+  background-color: rgba(255, 255, 255);
 }
 
 .close {
-    width: 30px;
-    height: 30px;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    cursor: pointer;
-    margin: 4px;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  cursor: pointer;
+  margin: 4px;
 }
 
 .close:hover {
-    background-color: rgba(255, 21, 0, 0.7);
+  background-color: rgba(255, 21, 0, 0.7);
 }
 
 /* Background Dropdown Menu Style */
 .dropdown {
-    position: relative;
-    display: inline-block
+  position: relative;
+  display: inline-block;
 }
 
 .dropdown-options {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    width: 100%;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  width: 100%;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
 
 .bg-option {
-    display: block;
-    padding: 10px 20px;
-    border: 0.1em solid #FFFFFF;
-    border-radius: 2px;
-    box-sizing: border-box;
-    text-decoration: none;
-    font-family: 'JetBrains Mono', monospace;
-    font-weight: 300;
-    color: #FFFFFF;
-    width: 100%;
-    text-align: center;
-    transition: all 0.2s;
-    background-color: rgba(0, 0, 0, 0.5);
-    cursor: pointer;
+  display: block;
+  padding: 10px 20px;
+  border: 0.1em solid #ffffff;
+  border-radius: 2px;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "JetBrains Mono", monospace;
+  font-weight: 300;
+  color: #ffffff;
+  width: 100%;
+  text-align: center;
+  transition: all 0.2s;
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
 }
 
 .dropdown-options a {
-    display: block;
+  display: block;
 }
 
 .dropdown:hover .dropdown-options {
-    display: block;
+  display: block;
 }
 
 /* Settings Icon Styles */
 .settings-icon-container {
-    display: block;
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    cursor: pointer;
-    background: rgba(0, 0, 0, 0.8);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: block;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .settings-icon-container:hover {
-    background: rgba(0, 0, 0, 1);
+  background: rgba(0, 0, 0, 1);
 }
 
 .settings-icon {
-    padding: 10px;
-    width: 40px;
-    height: 40px;
+  padding: 10px;
+  width: 40px;
+  height: 40px;
 }
 
 /* Media Queries */
 @media (max-width: 500px) {
+  .container {
+    max-height: 500px;
+    top: 10%;
+  }
 
-    .container {
-        max-height: 500px;
-        top: 10%;
-    }
+  .weather-container {
+    font-size: 12px;
+  }
 
-    .weather-container {
-        font-size: 12px;
-    }
+  .icon-container > img {
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    bottom: 20px;
+  }
 
-    .icon-container > img {
-        width: 40px;
-        height: 40px;
-        padding: 5px;
-        bottom: 20px
-    }
+  .date-container {
+    padding: 15px;
+  }
 
-    .date-container {
-        padding: 15px;
-    }
-    
-    .date-container > .time {
-        font-size: 30px;
-    }
+  .date-container > .time {
+    font-size: 30px;
+  }
 
-    .quote-container {
-        grid-area: quote;
-        padding: 5px;
-        box-sizing: border-box;
-        max-width: 380px;
-    }
+  .quote-container {
+    grid-area: quote;
+    padding: 5px;
+    box-sizing: border-box;
+    max-width: 380px;
+  }
 
-    .quote-container > .quote {
-        font-size: 16px;
-        padding: 5px;
-    }
+  .quote-container > .quote {
+    font-size: 16px;
+    padding: 5px;
+  }
 
-    .author {
-        font-size: 14px;
-    }
+  .author {
+    font-size: 14px;
+  }
 
-    .buttons {
-        padding: 5px;
-    }
-    
-    .buttons > img {
-        width: 20px;
-        height: 20px;
-    }
+  .buttons {
+    padding: 5px;
+  }
 
-    .settings-icon-container {
-        bottom: 10%;
-    }
+  .buttons > img {
+    width: 20px;
+    height: 20px;
+  }
 
-    .settings {
-        width: 100%;
-        height: 100%;
-    }
+  .settings-icon-container {
+    bottom: 10%;
+  }
 
-    .close {
-        right: 15px;
-        bottom: 50px;
-    }
-    
+  .settings {
+    width: 100%;
+    height: 100%;
+  }
+
+  .close {
+    right: 15px;
+    bottom: 50px;
+  }
 }

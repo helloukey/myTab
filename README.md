@@ -28,7 +28,7 @@ myTab is your web browser's separate tab solution with features like background 
 
 ## Browser compatibility
 
-**For Firefox Browser**: background filter feature is behind `thelayout.css.backdrop-filter.enabled` preferences (needs to be set to true) and the `gfx.webrender.all` preferences (needs to be set to true). To change preferences in *Firefox*, visit **about:config**.
+**For Firefox Browser**: background filter feature is behind `thelayout.css.backdrop-filter.enabled` preferences (needs to be set to true) and the `gfx.webrender.all` preferences (needs to be set to true). To change preferences in _Firefox_, visit **about:config**.
 
 ## Modular Approach (v2)
 

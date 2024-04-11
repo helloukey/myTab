@@ -10,4 +10,4 @@ setInterval(() => {
   dateContainer.textContent = dayjs().format("MMMM D, YYYY");
 }, 1000);
 
-export { timeContainer, dateContainer }
+export { timeContainer, dateContainer };

@@ -13,4 +13,4 @@ closeButton.addEventListener("click", () => {
   settingsIcon.classList.remove("hidden");
 });
 
-export { settings, settingsIcon, closeButton }
+export { settings, settingsIcon, closeButton };

@@ -1,21 +1,34 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="stylesheet" href="style.css"/>
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-    <link rel="manifest" href="favicon/site.webmanifest">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="favicon/site.webmanifest" />
     <script src="/dayjs.min.js"></script>
     <title>myTab</title>
   </head>
   <body>
     <!-- Container -->
     <div class="container">
-
       <!-- Weather Container -->
       <div class="weather-container">
         <div class="icon-container">
@@ -42,76 +55,116 @@
         <p class="author"></p>
 
         <!-- Loader Animation -->
-      <div class="loader hidden"></div>
-
+        <div class="loader hidden"></div>
       </div>
 
       <!-- Quote Buttons -->
       <div class="buttons">
-        <img src="icons/copy.svg" alt="copy" class="copy"/>
-        <img src="icons/refresh.svg" alt="refresh" class="refresh"/>
+        <img src="icons/copy.svg" alt="copy" class="copy" />
+        <img src="icons/refresh.svg" alt="refresh" class="refresh" />
       </div>
-
     </div>
     <!-- Container Ended Here -->
 
     <!-- Settings Menu -->
     <div class="settings hidden">
-
       <div class="setting1">
         <p>Blur</p>
-        <input type="range" id="range1" class="slider" value="10" min="0" max="50"/>
+        <input
+          type="range"
+          id="range1"
+          class="slider"
+          value="10"
+          min="0"
+          max="50"
+        />
       </div>
 
       <div class="setting2">
         <p>Brightness</p>
-        <input type="range" id="range2" class="slider" value="100" min="0" max="500"/>
+        <input
+          type="range"
+          id="range2"
+          class="slider"
+          value="100"
+          min="0"
+          max="500"
+        />
       </div>
 
       <div class="setting3">
         <p>Contrast</p>
-        <input type="range" id="range3" class="slider" value="100" min="0" max="500"/>
+        <input
+          type="range"
+          id="range3"
+          class="slider"
+          value="100"
+          min="0"
+          max="500"
+        />
       </div>
 
       <div class="setting4">
         <p>Saturate</p>
-        <input type="range" id="range4" class="slider" value="100" min="0" max="500"/>
+        <input
+          type="range"
+          id="range4"
+          class="slider"
+          value="100"
+          min="0"
+          max="500"
+        />
       </div>
 
       <div class="setting5">
         <p>Grayscale</p>
-        <input type="range" id="range5" class="slider" value="0" min="0" max="100"/>
+        <input
+          type="range"
+          id="range5"
+          class="slider"
+          value="0"
+          min="0"
+          max="100"
+        />
       </div>
 
       <div class="setting6">
         <p>Sepia</p>
-        <input type="range" id="range6" class="slider" value="0" min="0" max="100"/>
+        <input
+          type="range"
+          id="range6"
+          class="slider"
+          value="0"
+          min="0"
+          max="100"
+        />
       </div>
 
       <div class="setting7">
         <button class="reset">Reset Effects</button>
         <div class="big-buttons">
-          <button class="fullscreen-toggle"><span class="text">Toggle Fullscreen</span></button>
+          <button class="fullscreen-toggle">
+            <span class="text">Toggle Fullscreen</span>
+          </button>
           <div class="dropdown">
-            <button class="bg-refresh"><span class="text">Change Background</span></button>
-            <div class="dropdown-options">
-            </div>
+            <button class="bg-refresh">
+              <span class="text">Change Background</span>
+            </button>
+            <div class="dropdown-options"></div>
           </div>
         </div>
       </div>
 
-        <img src="icons/close.svg" alt="close" class="close">
-        
+      <img src="icons/close.svg" alt="close" class="close" />
     </div>
     <!-- Settings Menu Ended Here -->
 
     <!-- Settings Icon Container -->
     <div class="settings-icon-container">
-      <img src="icons/settings.svg" alt="settings" class="settings-icon">
+      <img src="icons/settings.svg" alt="settings" class="settings-icon" />
     </div>
 
     <!-- Scripts -->
     <script type="module" src="index.js"></script>
-
   </body>
 </html>
