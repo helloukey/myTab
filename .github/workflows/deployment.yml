@@ -1,4 +1,4 @@
-name: Test and Deploy
+name: Deployment
 on:
   push:
     branches:
@@ -7,7 +7,7 @@ on:
     branches:
       - main
 jobs:
-  build:
+  upload:
     runs-on: ubuntu-latest
     steps:
       - name: Get Code
@@ -17,7 +17,7 @@ jobs:
         with:
           path: .
   deploy:
-    needs: build
+    needs: upload
     # Only deploy for the main branch
     if: github.ref == 'refs/heads/main'
     permissions:
