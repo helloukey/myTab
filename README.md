@@ -1,7 +1,6 @@
+# myTab
 
 ![Logo](https://raw.githubusercontent.com/helloukey/myTab/main/favicon/apple-touch-icon.png)
-
-# myTab
 
 myTab is your web browser's separate tab solution with features like background wallpapers from [Unsplash](https://github.com/unsplash/unsplash-source-js), weather information from [Weather API](https://www.weatherapi.com/), time and date from [Day.js](https://day.js.org/) library, and quotes from [Quotable](https://github.com/lukePeavey/quotable#get-random-quote) API.
 
@@ -21,11 +20,11 @@ myTab is your web browser's separate tab solution with features like background 
 
 ## Install as Chrome Extension
 
-* Goto `chrome://extensions` on your chrome browser.
-* Enable **Developer mode** given on the right side.
-* Click **Load unpacked** to load the unpacked file.
-* Select the Project folder.
-* Enable the extension if not enabled by default.
+- Goto `chrome://extensions` on your chrome browser.
+- Enable **Developer mode** given on the right side.
+- Click **Load unpacked** to load the unpacked file.
+- Select the Project folder.
+- Enable the extension if not enabled by default.
 
 ## Browser compatibility
 
@@ -33,10 +32,8 @@ myTab is your web browser's separate tab solution with features like background 
 
 ## Modular Approach (v2)
 
-If you want to use this project with modules for better file management and structure, then please check the **[v2 branch](https://github.com/helloukey/myTab/tree/v2)**.
-
+If you want to use this project with modules for better file management and structure, then please check the **[v2 folder](https://github.com/helloukey/myTab/tree/main/v2)**.
 
 ## Authors
 
 - [@helloukey](https://www.github.com/helloukey)
-
